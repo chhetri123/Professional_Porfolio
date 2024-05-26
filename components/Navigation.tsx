@@ -12,7 +12,7 @@ const Data = [
     value: "Home",
     icon: Home,
     desc: "Home",
-    src: "/",
+    src: "./",
   },
   {
     label: "About",
@@ -57,7 +57,7 @@ export default function Navigation() {
     <section className="fixed backdrop-blur-md bottom-0 w-full xl:bottom-5 lg:flex justify-center items-center z-50">
       <div className="md:rounded-full border  py-3 flex justify-center z-50 md:gap-1 shadow-xl">
         {Data.map(({ value, icon, src }) => (
-          <Link href={`./${src}`} key={value}>
+          <Link href={src == "/" ? src : `./${src}`} key={value}>
             <div className="group relative px-3 cursor-pointer">
               <div
                 className={cn(
