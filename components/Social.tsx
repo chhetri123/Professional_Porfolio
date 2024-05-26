@@ -86,7 +86,7 @@ export const Data = [
     tooltip: "Connect On Github",
   },
   {
-    link: "https://twitter.com/dev_pthakur",
+    link: "https://scholar.google.com/citations?user=sn5n3ikAAAAJ",
     icon: "/google-scholar.svg",
     tooltip: "Follow On Google Scholar",
   },
