@@ -24,13 +24,12 @@ export default function ContactPage() {
         message: e.target.message.value,
         email: e.target.email.value,
       };
-      console.log(process.env.EMAILJS_USER_ID);
       await emailjs
         .send(
-          process.env.EMAILJS_SERVICE_ID as string,
-          process.env.EMAILJS_TEMPLATE_ID as string,
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
           templateData,
-          process.env.EMAILJS_USER_ID as string
+          process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string
         )
         .then(() => {
           toast.success("Email Sent Successfully");
