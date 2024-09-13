@@ -52,7 +52,7 @@ export default function Home() {
               </Button>
             </Link>
 
-            <Link href="/blogs">
+            <Link href="/blog">
               <Button
                 variant="secondary"
                 className="flex rounded-full gap-2 items-center"
