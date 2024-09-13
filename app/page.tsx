@@ -27,7 +27,7 @@ export default function Home() {
           <p className="text-sm md:text-font-medium relative w-4/5">
             I am a <b>Full-Stack Developer</b> with knowledge of microservice
             architecture, cloud services, and a keen interest in machine
-            learning. I am currently working in a Microservice Backend Position.
+            learning.
           </p>
 
           <PhoneSocial />

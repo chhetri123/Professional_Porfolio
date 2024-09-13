@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Portfolio: Manish Chhetri",
   description:
-    " Manish Chhetri is a full-stack developer with knowledge of microservice architecture, cloud services, and a keen interest in machine learnin also . He is currently working in a microservice backend position.",
+    " Manish Chhetri is a full-stack developer with knowledge of microservice architecture, cloud services, and a keen interest in machine learnin also.",
   keywords: [
     "Full-stack developer",
     "backend developer",

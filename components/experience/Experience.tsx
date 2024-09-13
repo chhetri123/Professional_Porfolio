@@ -34,12 +34,14 @@ const Experience = () => {
                     {data.role}
                   </p>
                   <ul className="list-disc font-sans text-sm mt-2 ml-5">
-                    <li className="my-1 text-gray-700 dark:text-gray-300">
-                      {data?.about1}
-                    </li>
-                    <li className="my-1 text-gray-700 dark:text-gray-300">
-                      {data?.about2}
-                    </li>
+                    {data.about.map((point, index) => (
+                      <li
+                        key={index}
+                        className="my-1 text-gray-700 dark:text-gray-300"
+                      >
+                        {point}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -55,23 +57,37 @@ export default Experience;
 
 const Data = [
   {
+    name: "Swivt",
+    logo: "https://media.licdn.com/dms/image/v2/C560BAQGSFcB5vRFt5g/company-logo_200_200/company-logo_200_200/0/1673509291720?e=1734566400&v=beta&t=EBIpTAAoO8j0_d13PSp2juNW8VdHVXAkL4Ha6phEfTQ",
+    timeSpan: "Jun 2024 - Current",
+    role: "Full Stack Developer (Mentor)",
+
+    about: [
+      "Mentor junior developers to enhance skills.",
+      "Guide building real-world apps with technologies",
+      " Review code, provide feedback, and advice.",
+    ],
+  },
+  {
     name: "EnterLeaf",
-    logo: "https://media.licdn.com/dms/image/D4D0BAQH8gkvAJ_Ox7g/company-logo_200_200/0/1715545920565?e=1724889600&v=beta&t=7bbVLFCwk25sEeTK_mUSEtRlh7FRSsuASrTxxw5-Sc8",
+    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQH8gkvAJ_Ox7g/company-logo_200_200/company-logo_200_200/0/1715545920565?e=1734566400&v=beta&t=WS5oyp_uNCbXtPUE97Uj2_D5nWrZU25EEE8vno7wZbs",
     timeSpan: "Jan 2024 - Current",
     role: "Microservice Backend Developer",
-    about1:
+    about: [
       "Architecting microservices and implementing containerization for scalability.",
-    about2: "Utilizing CI/CD pipeline for efficient deployment.",
+      "Utilizing CI/CD pipeline for efficient deployment.",
+    ],
   },
   {
     name: "UpStartPrep",
-    logo: "https://media.licdn.com/dms/image/C560BAQGt8nd2YciCCA/company-logo_200_200/0/1671462814241/upstartprep_logo?e=1724889600&v=beta&t=c-Vf-bM6K_HDfVO-I6gjuwKkHq_TA5sUTGXizAQHVIU",
+    logo: "https://media.licdn.com/dms/image/v2/C560BAQGt8nd2YciCCA/company-logo_200_200/company-logo_200_200/0/1671462814241/upstartprep_logo?e=1734566400&v=beta&t=jxttV6458fUzut6htb5kuWsgg4gAUwuIxx_yB3_00MA",
     timeSpan: "Dec 2022 - Jun 2023",
     role: "Backend Developer",
 
-    about1:
+    about: [
       "Creating and improving application programming interfaces (APIs), architecture, and servers, and databases (SQL) for E‑Learning Platforms",
-    about2:
+
       " Implementation of Payment System ( Stripe ) and Used Cloud Services like AWS",
+    ],
   },
 ];
