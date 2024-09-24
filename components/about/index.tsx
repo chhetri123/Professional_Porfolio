@@ -15,9 +15,9 @@ export default function About() {
         <div className="flex items-center justify-center animate_in p-6 md:w-4/5 mr-10">
           <div className="w-1/2 relative flex justify-end">
             <NextImage
-              src="/myimage2.png"
-              alt="Pankaj Kumar"
-              className="rounded-full w-3/4 h-auto md:w-3/4 md:auto ml-[20%]"
+              src="./intro_image.png"
+              alt="Manish Chhetri"
+              className="rounded-full md:w-3/4 md:auto ml-[25%]"
             />
           </div>
 
