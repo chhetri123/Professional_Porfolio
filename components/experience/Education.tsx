@@ -52,7 +52,7 @@ export default Education;
 const Data = [
   {
     name: "Pashchimanchal Campus Pokhara",
-    logo: "https://scontent.fktm6-1.fna.fbcdn.net/v/t39.30808-1/301391504_478228440980659_3249406229698986403_n.png?stp=c0.0.480.480a_dst-png_p480x480&_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=SIqXOnl0nKYQ7kNvgGd-S0q&_nc_ht=scontent.fktm6-1.fna&oh=00_AYDQ4IlqRJGCfMvOvE7DBGIuPAVp6J38xJFuFrNRNcRULw&oe=6658A264",
+    logo: "https://www.clipartmax.com/png/middle/168-1680696_1511953909tu-logo-tribhuvan-university-logo.png",
     timeSpan: "2019- 2024",
     department: "Electronics, Communication and Information Engineering",
     course: "Bachelor of Engineering",
