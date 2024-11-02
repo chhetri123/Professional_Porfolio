@@ -4,50 +4,65 @@ import NextImage from "../NextImage";
 
 export default function About() {
   return (
-    <section
-      className="flex flex-col md:flex-row items-center justify-center mt-28 mb-28 md:py-20  pb-10 h-fullscreen"
-      id="about"
-    >
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold text-center border-b-2 border-blue-600 pb-4 mt-2 mb-5">
+    <section className="container mx-auto px-4 py-12 md:py-24" id="about">
+      <div className="max-w-6xl mx-auto">
+        {/* Header - Smaller text on mobile */}
+        <h2 className="text-xl md:text-3xl font-bold text-center mb-8 md:mb-12">
           About Me
-        </h1>
-        <div className="flex items-center justify-center animate_in p-6 md:w-4/5 mr-10">
-          <div className="w-1/2 relative flex justify-end">
-            <NextImage
-              src="/myimage2.png"
-              alt="Pankaj Kumar"
-              className="rounded-full w-3/4 h-auto md:w-3/4 md:auto ml-[20%]"
-            />
+          <div className="h-1 w-20 bg-blue-600 mx-auto mt-2"></div>
+        </h2>
+
+        {/* Content Container */}
+        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
+          {/* Image Container */}
+          <div className="w-full lg:w-2/5">
+            <div className="relative aspect-square w-[240px] sm:w-[280px] md:w-[320px] lg:max-w-[400px] mx-auto">
+              <NextImage
+                src="/intro_image.png"
+                alt="Manish Chhetri"
+                className="rounded-full shadow-xl object-cover w-full h-full"
+              />
+            </div>
           </div>
 
-          <div className="text-justify animate_in p-6 md:w-1/2">
-            <div className="ml-[10%] mt-[-5%]">
-              <h1 className="text-lg font-bold pb-4 mt-2 mb-2">
-                Professional Summary
-              </h1>
-              <p className="text-sm md:text-sm">
+          {/* Text Content */}
+          <div className="w-full lg:w-3/5">
+            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-blue-600">
+              Professional Summary
+            </h3>
+
+            <div className="space-y-3 md:space-y-4 font-medium">
+              <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
                 I am Manish Chhetri, a dedicated web developer with a Bachelor's
                 degree in Electronics, Communication, and Information
                 Engineering from{" "}
-                <a href="https://ioepas.edu.np/" target="__blank">
-                  <b>
-                    <i>IOE Paschimanchal Campus</i>
-                  </b>
+                <a
+                  href="https://ioepas.edu.np/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+                >
+                  IOE Paschimanchal Campus
                 </a>
-                . Currently, I specialize as a Microservice backend developer,
+                .
+              </p>
+
+              <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
+                Currently, I specialize as a Microservice backend developer,
                 where I design, develop, containerize, and deploy
                 production-level projects using AWS cloud services.
-                <br />
-                <br />
+              </p>
+
+              <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
                 As a dedicated web developer with enthusiasm for learning new
                 technology to enhance my problem-solving skills, I sometimes
                 write blogs and make videos to stay updated and share my ideas
                 with others, which might help them accomplish things in their
                 journey. I love bringing my imagination to solve real-life
                 problems.
-                <br />
-                <br />
+              </p>
+
+              <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
                 Beyond the screen, I am an avid reader of Nepali literature,
                 which captivates me with its storytelling. I find joy in
                 discussing the latest tech topics with close friends, refreshing

@@ -1,5 +1,3 @@
-// pages/resume.tsx
-
 import React from "react";
 
 const ResumePage = () => (

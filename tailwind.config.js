@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -24,6 +26,7 @@ module.exports = {
 
       animation: {
         blob: "blob 7s infinite",
+        "border-glow": "border-glow 2s ease-in-out infinite",
       },
       keyframes: {
         blob: {
@@ -39,6 +42,10 @@ module.exports = {
           "100%": {
             transform: "tranlate(0px, 0px) scale(1)",
           },
+        },
+        "border-glow": {
+          "0%, 100%": { opacity: 0.5 },
+          "50%": { opacity: 1 },
         },
       },
 
@@ -96,6 +103,35 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: "none",
+            color: "inherit",
+            a: {
+              color: "#3182ce",
+              "&:hover": {
+                color: "#2c5282",
+              },
+            },
+            code: {
+              color: "inherit",
+              padding: "0.2em 0.4em",
+              borderRadius: "0.25rem",
+            },
+            "code::before": {
+              content: '""',
+            },
+            "code::after": {
+              content: '""',
+            },
+          },
+        },
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", ...fontFamily.sans],
+        serif: ["var(--font-playfair)", ...fontFamily.serif],
+      },
     },
 
     variants: {
@@ -104,5 +140,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };

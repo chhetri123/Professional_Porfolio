@@ -1,167 +1,70 @@
-"use client";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import { Post } from "@/types/post";
+import BlogContent from "@/components/Blog/BlogContent";
 
-import React, { useEffect, useState } from "react";
+async function getPosts() {
+  const contentDir = path.join(process.cwd(), "content");
 
-import BlogCard from "@/components/Blog";
-type blogSchema = {
-  id: string;
-  title: string;
-  readTime: string;
-  image: string;
-  likes: number;
-  comments: number;
-  date: string;
-};
-const BlogPage: React.FC = () => {
-  const [blogPosts, setBlogPosts] = useState([
-    {
-      id: "1",
-      title: "Exploring the Beauty of Nature",
-      date: "2024-08-04",
-      readTime: "5",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
-      likes: 150,
-      comments: 25,
-    },
-    {
-      id: "2",
-      title: "Exploring the Beauty of Nature",
-      date: "2024-08-04",
-      readTime: "5",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
-      likes: 150,
-      comments: 25,
-    },
-    {
-      id: "3",
-      title: "Exploring the Beauty of Nature",
-      date: "2024-08-04",
-      readTime: "5",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
-      likes: 150,
-      comments: 25,
-    },
-    {
-      id: "4",
-      title: "Exploring the Beauty of Nature",
-      date: "2024-08-04",
-      readTime: "5",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
-      likes: 150,
-      comments: 25,
-    },
-    {
-      id: "3",
-      title: "Exploring the Beauty of Nature",
-      date: "2024-08-04",
-      readTime: "5",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
-      likes: 150,
-      comments: 25,
-    },
-    {
-      id: "4",
-      title: "Exploring the Beauty of Nature",
-      date: "2024-08-04",
-      readTime: "5",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
-      likes: 150,
-      comments: 25,
-    },
-    {
-      id: "3",
-      title: "Exploring the Beauty of Nature",
-      date: "2024-08-04",
-      readTime: "5",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
-      likes: 150,
-      comments: 25,
-    },
-    {
-      id: "4",
-      title: "Exploring the Beauty of Nature",
-      date: "2024-08-04",
-      readTime: "5",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
-      likes: 150,
-      comments: 25,
-    },
-    {
-      id: "3",
-      title: "Exploring the Beauty of Nature",
-      date: "2024-08-04",
-      readTime: "5",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
-      likes: 150,
-      comments: 25,
-    },
-    {
-      id: "4",
-      title: "Exploring the Beauty of Nature",
-      date: "2024-08-04",
-      readTime: "5",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
-      likes: 150,
-      comments: 25,
-    },
-    {
-      id: "3",
-      title: "Exploring the Beauty of Nature",
-      date: "2024-08-04",
-      readTime: "5",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
-      likes: 150,
-      comments: 25,
-    },
-    {
-      id: "4",
-      title: "Exploring the Beauty of Nature",
-      date: "2024-08-04",
-      readTime: "5",
-      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
-      likes: 150,
-      comments: 25,
-    },
-  ]);
+  const getAllFiles = (
+    dirPath: string,
+    arrayOfFiles: string[] = []
+  ): string[] => {
+    const files = fs.readdirSync(dirPath);
 
-  // useEffect(() => {
-  //   const fetchPost = async () => {
-  //     const response = await fetch("/api/post");
-  //     const data = await response.json();
-  //     setBlogPosts(data);
-  //   };
+    files.forEach((file) => {
+      const filePath = path.join(dirPath, file);
+      if (fs.statSync(filePath).isDirectory()) {
+        arrayOfFiles = getAllFiles(filePath, arrayOfFiles);
+      } else if (file.endsWith(".md")) {
+        arrayOfFiles.push(filePath);
+      }
+    });
 
-  //   fetchPost();
-  // }, []);
-  return (
-    <section
-      className="flex flex-col md:flex-row items-center justify-center md:py-5  h-fullscreen mx-4 mb-24"
-      id="blogs"
-    >
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold text-center border-b-2 border-blue-600 pb-4 mt-2 mb-5">
-          My Blogs
-        </h1>
+    return arrayOfFiles;
+  };
 
-        <div className="grid md:grid-cols-3 gap-8 md:pl-36 md:pr-20">
-          {blogPosts.map((post: blogSchema) => (
-            <BlogCard
-              key={post.id}
-              title={post.title}
-              tags={["Hello", "javascript", "css"]}
-              subtitle={post.title}
-              date={post.date}
-              readTime={post.readTime}
-              imageUrl={post.image}
-              likes={post.likes}
-              comments={post.comments}
-              isDarkMode={false}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+  const files = getAllFiles(contentDir);
+
+  const posts: Post[] = files.map((filepath) => {
+    const content = fs.readFileSync(filepath, "utf8");
+    const { data } = matter(content);
+    const slug = filepath
+      .replace(contentDir, "")
+      .replace(/^\//, "")
+      .replace(/\.md$/, "");
+
+    return {
+      slug,
+      title: data.title,
+      date: data.published,
+      author: data.author,
+      excerpt: data.excerpt || data.description,
+      categories: data.categories || [],
+    };
+  });
+
+  return posts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
-};
+}
 
-export default BlogPage;
+function getAllCategories(posts: Post[]) {
+  const categories = posts.flatMap((post) => post.categories);
+  const categoryCounts = categories.reduce((acc, category) => {
+    acc[category] = (acc[category] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
+
+  return Object.entries(categoryCounts)
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export default async function BlogIndex() {
+  const posts = await getPosts();
+  const categories = getAllCategories(posts);
+
+  return <BlogContent initialPosts={posts} categories={categories} />;
+}
