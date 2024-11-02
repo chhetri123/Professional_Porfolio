@@ -36,7 +36,6 @@ export default function ContactPage() {
         }),
         e.target.reset();
     } catch (error) {
-      console.log(error);
     } finally {
       setIsSubmitting(false);
     }
@@ -44,15 +43,16 @@ export default function ContactPage() {
 
   return (
     <section
-      className="w-full flex animate_in flex-col min-h-full justify-center items-center mb-32"
+      className="flex animate_in flex-col min-h-full justify-center items-center px-4 sm:px-6 mb-32"
       id="contact"
     >
       <h1 className="text-3xl font-semibold text-center my-10">Contact</h1>
-      <div className="flex flex-col md:flex-row lg:w-[70%] items-center justify-around">
-        <Card className="w-[90vw] lg:w-[500px]">
+      <div className="mx-auto flex flex-col md:flex-row max-w-7xl gap-8 items-center justify-end">
+        <Card className="md:w-[450px]">
           <CardHeader className="text-center font-semibold">
             Just to say hi,
-            <br></br>Feel free to shoot me a message 😉.
+            <br />
+            Feel free to shoot me a message 😉.
           </CardHeader>
           <CardContent>
             <form onSubmit={sendEmail}>
@@ -96,11 +96,11 @@ export default function ContactPage() {
             </form>
           </CardContent>
         </Card>
-        <div className="lg:w-[500px] hidden lg:block">
+        <div className="w-full md:w-[450px] hidden md:block ml-auto">
           <NextImage
             height={500}
             width={500}
-            className="h-[300px] w-[300px] lg:h-[500px] lg:w-[500px]"
+            className="w-full h-auto max-w-[450px] mx-auto"
             src="/contact.svg"
             alt="contactimg"
           />

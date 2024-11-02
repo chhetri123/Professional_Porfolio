@@ -1,16 +1,37 @@
 module.exports = {
-  env: { browser: true, es2020: true },
+  root: true,
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
   extends: [
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
+    "plugin:@next/next/recommended",
+    "next/core-web-vitals",
   ],
-  parserOptions: { ecmaVersion: "latest", sourceType: "module" },
-  settings: { react: { version: "18.2" } },
-  plugins: ["react-refresh"],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: "module",
+  },
+  plugins: ["@typescript-eslint", "react"],
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
   rules: {
-    "react-refresh/only-export-components": "warn",
-    "react/no-unescaped-entities": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "@typescript-eslint/no-explicit-any": "warn",
   },
 };

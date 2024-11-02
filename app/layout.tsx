@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 
 import "./globals.css";
 import Navigation from "@/components/Navigation";
@@ -9,10 +9,20 @@ import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const inter = Inter({ subsets: ["latin"] });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "Portfolio: Manish Chhetri",
+  title: "Manish Chhetri | Full Stack Developer",
   description:
     " Manish Chhetri is a full-stack developer with knowledge of microservice architecture, cloud services, and a keen interest in machine learnin also.",
   keywords: [
@@ -27,6 +37,16 @@ export const metadata: Metadata = {
     "chhetri",
     "manish",
   ],
+  icons: {
+    icon: [
+      {
+        url: "/favicon.ico",
+        href: "/favicon.ico",
+        type: "image/x-icon",
+      },
+    ],
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -35,8 +55,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body className="font-sans antialiased">
         <ThemeProvider attribute="class">
           <div className="relative overflow-hidden min-h-screen">
             <div className="absolute top-10 left-1/3 size-[500px] bg-blue-200 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob -z-10"></div>
