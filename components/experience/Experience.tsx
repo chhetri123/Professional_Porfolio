@@ -65,7 +65,7 @@ const Data = [
     about: [
       "Managing server configurations, troubleshooting, and resolving issues",
       "Enhancing existing projects by implementing new features",
-      "Configuring and optimizing Nginx, alongside handling DNS and domain management for over 100 domains and subdomains through Cloudflare",
+      "Configuring and Optimizing Nginx, alongside handling DNS and domain management for over 100 domains and subdomains through Cloudflare",
     ],
   },
 
