@@ -66,14 +66,14 @@ export default Education;
 const Data = [
   {
     name: "Pashchimanchal Campus Pokhara",
-    logo: "https://www.clipartmax.com/png/middle/168-1680696_1511953909tu-logo-tribhuvan-university-logo.png",
+    logo: "/paschimanchal.png",
     timeSpan: "2019- 2024",
     department: "Electronics, Communication and Information Engineering",
     course: "Bachelor of Engineering",
   },
   {
     name: "Global Collegiate Secondary School",
-    logo: "https://i0.wp.com/www.merorojgari.com/wp-content/uploads/2024/03/Global-Collegiate-School-logo.jpg?resize=150%2C150&ssl=1",
+    logo: "/global.png",
     timeSpan: "2017 - 2019",
     department: "Science",
     course: "Plus 2",

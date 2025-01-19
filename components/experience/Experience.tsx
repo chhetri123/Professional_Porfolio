@@ -57,8 +57,21 @@ export default Experience;
 
 const Data = [
   {
-    name: "Swivt",
-    logo: "https://media.licdn.com/dms/image/v2/C560BAQGSFcB5vRFt5g/company-logo_200_200/company-logo_200_200/0/1673509291720?e=1734566400&v=beta&t=EBIpTAAoO8j0_d13PSp2juNW8VdHVXAkL4Ha6phEfTQ",
+    name: "Swivt technology",
+    logo: "/swivt.png",
+    timeSpan: "Jun 2024 - Current",
+    role: "Full Stack Software Developer",
+
+    about: [
+      "Managing server configurations, troubleshooting, and resolving issues",
+      "Enhancing existing projects by implementing new features",
+      "Configuring and optimizing Nginx, alongside handling DNS and domain management for over 100 domains and subdomains through Cloudflare",
+    ],
+  },
+
+  {
+    name: "Swivt Education",
+    logo: "/swivt_education.png",
     timeSpan: "Jun 2024 - Current",
     role: "Full Stack Developer (Mentor)",
 
@@ -70,8 +83,8 @@ const Data = [
   },
   {
     name: "EnterLeaf",
-    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQH8gkvAJ_Ox7g/company-logo_200_200/company-logo_200_200/0/1715545920565?e=1734566400&v=beta&t=WS5oyp_uNCbXtPUE97Uj2_D5nWrZU25EEE8vno7wZbs",
-    timeSpan: "Jan 2024 - Current",
+    logo: "/enterleaf.png",
+    timeSpan: "Jan 2024 - May 2024",
     role: "Microservice Backend Developer",
     about: [
       "Architecting microservices and implementing containerization for scalability.",
@@ -80,7 +93,7 @@ const Data = [
   },
   {
     name: "UpStartPrep",
-    logo: "https://media.licdn.com/dms/image/v2/C560BAQGt8nd2YciCCA/company-logo_200_200/company-logo_200_200/0/1671462814241/upstartprep_logo?e=1734566400&v=beta&t=jxttV6458fUzut6htb5kuWsgg4gAUwuIxx_yB3_00MA",
+    logo: "/upstartprep.png",
     timeSpan: "Dec 2022 - Jun 2023",
     role: "Backend Developer",
 
