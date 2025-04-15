@@ -59,7 +59,7 @@ const Data = [
   {
     name: "Swivt technology",
     logo: "/swivt.png",
-    timeSpan: "Jun 2024 - Current",
+    timeSpan: "Nov 2023 - Current",
     role: "Full Stack Software Developer",
 
     about: [
@@ -72,7 +72,7 @@ const Data = [
   {
     name: "Swivt Education",
     logo: "/swivt_education.png",
-    timeSpan: "Jun 2024 - Current",
+    timeSpan: "Nov 2023 - Current",
     role: "Full Stack Developer (Mentor)",
 
     about: [
@@ -84,7 +84,7 @@ const Data = [
   {
     name: "EnterLeaf",
     logo: "/enterleaf.png",
-    timeSpan: "Jan 2024 - May 2024",
+    timeSpan: "Jul 2023 - Nov 2023",
     role: "Microservice Backend Developer",
     about: [
       "Architecting microservices and implementing containerization for scalability.",
