@@ -30,12 +30,28 @@ export default function About() {
             <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-blue-600">
               Professional Summary
             </h3>
-
+            {/* I’m Manish Chhetri, a passionate and results-driven web developer
+            with a Bachelor's degree in Electronics, Communication, and
+            Information Engineering from IOE Paschimanchal Campus. 
+            I have a
+            strong interest in cloud computing, microservices, and Artificial
+            Intelligence, and I continuously explore technologies like Docker,
+            Kubernetes, Machine Learning, NLP, Computer Vision, and IoT. I enjoy
+            learning new skills to build secure and scalable solutions and
+            mentoring junior developers whenever possible. To share knowledge
+            and stay updated, I occasionally write blogs and create videos that
+            might help others in their journey.
+            
+            Beyond technology, I’m an avid
+            reader of Nepali literature, captivated by its storytelling. I also
+            enjoy discussing the latest tech trends with friends and find
+            inspiration through these conversations. In my free time, I like to
+            relax by listening to music. */}
             <div className="space-y-3 md:space-y-4 font-medium">
               <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
-                I am Manish Chhetri, a dedicated web developer with a Bachelor's
-                degree in Electronics, Communication, and Information
-                Engineering from{" "}
+                I am Manish Chhetri, a passionate and results-driven software
+                developer with a Bachelor's degree in Electronics,
+                Communication, and Information Engineering from{" "}
                 <a
                   href="https://ioepas.edu.np/"
                   target="_blank"
@@ -48,25 +64,29 @@ export default function About() {
               </p>
 
               <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
-                Currently, I specialize as a Microservice backend developer,
-                where I design, develop, containerize, and deploy
-                production-level projects using AWS cloud services.
+                I have a strong passion for cloud computing, microservices, and
+                Artificial Intelligence. I enjoy diving deep into technologies
+                like Docker and Kubernetes to build efficient and scalable
+                systems. Additionally, I explore Machine Learning, Natural
+                Language Processing, and Computer Vision to better understand
+                AI’s capabilities. My interest also extends to the Internet of
+                Things, where connectivity and data play a crucial role. By
+                continuously learning and experimenting, I aim to stay at the
+                cutting edge of technology and apply innovative solutions.
               </p>
 
               <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
-                As a dedicated web developer with enthusiasm for learning new
-                technology to enhance my problem-solving skills, I sometimes
-                write blogs and make videos to stay updated and share my ideas
-                with others, which might help them accomplish things in their
-                journey. I love bringing my imagination to solve real-life
-                problems.
+                I enjoy learning new skills to build secure and scalable
+                solutions and mentoring junior developers whenever possible. To
+                share knowledge and stay updated, I occasionally write blogs and
+                create videos that might help others in their journey.
               </p>
 
               <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
-                Beyond the screen, I am an avid reader of Nepali literature,
-                which captivates me with its storytelling. I find joy in
-                discussing the latest tech topics with close friends, refreshing
-                myself through these conversations. In my downtime, I enjoy
+                Beyond technology, I’m an avid reader of Nepali literature,
+                captivated by its storytelling. I also enjoy discussing the
+                latest tech trends with friends and find inspiration through
+                these conversations. In my free time, I like to relax by
                 listening to music.
               </p>
             </div>

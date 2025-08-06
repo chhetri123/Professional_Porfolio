@@ -1,7 +1,13 @@
 "use client";
 
 import React from "react";
-import { Frontend, Backend, DevOps, CloudServices } from "./constant";
+import {
+  Frontend,
+  Backend,
+  DevOps,
+  CloudServices,
+  MachineLearning,
+} from "./constant";
 
 interface SkillComponents {
   [key: string]: () => JSX.Element;
@@ -12,6 +18,7 @@ const skillComponents: SkillComponents = {
   Backend: Backend,
   DevOps: DevOps,
   CloudServices: CloudServices,
+  MachineLearning: MachineLearning,
 };
 
 const data = [
@@ -26,6 +33,9 @@ const data = [
   },
   {
     label: "CloudServices",
+  },
+  {
+    label: "MachineLearning",
   },
 ];
 

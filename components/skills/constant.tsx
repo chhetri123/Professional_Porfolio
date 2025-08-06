@@ -86,6 +86,33 @@ export const CloudServicesSkill = [
   },
 ];
 
+export const MachineLearningSkill = [
+  {
+    name: "Python",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+  },
+  {
+    name: "TensorFlow",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
+  },
+  {
+    name: "PyTorch",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg",
+  },
+  {
+    name: "Pandas",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
+  },
+  {
+    name: "Sklearn",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png",
+  },
+  {
+    name: "Numpy",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg",
+  },
+];
+
 function SkillCategory({ skills }: { skills: any[] }) {
   return (
     <div className="my-5 flex flex-wrap gap-5 md:w-[900px]">
@@ -123,4 +150,8 @@ export function DevOps() {
 }
 export function CloudServices() {
   return <SkillCategory skills={CloudServicesSkill} />;
+}
+
+export function MachineLearning() {
+  return <SkillCategory skills={MachineLearningSkill} />;
 }

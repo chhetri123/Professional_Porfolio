@@ -8,6 +8,8 @@ import About from "@/components/about";
 import ProjectsPage from "@/components/projects";
 import Skills from "@/components/skills";
 import Experience from "@/components/experience";
+import ResearchAchievements from "@/components/research-achievements";
+import PhotoGallery from "@/components/photo-gallery";
 import ContactPage from "@/components/contact";
 
 export default function Home() {
@@ -99,6 +101,8 @@ export default function Home() {
         <ProjectsPage />
       </div>
       <Experience />
+      <ResearchAchievements />
+      <PhotoGallery />
       <ContactPage />
     </>
   );
