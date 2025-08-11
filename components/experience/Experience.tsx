@@ -67,8 +67,9 @@ const Data = [
 
     about: [
       "Managing server configurations, troubleshooting, and resolving issues",
+      "Handling international client projects, ensuring high-quality deliverables and receiving consistently positive feedback",
       "Enhancing existing projects by implementing new features",
-      "WebRTC and role‑based management systems",
+      "WebRTC ,CRM,CMS and role‑based management systems",
       "Application containerization, Nginx optimization, Cloudflare DNS/domain management, and end-to-end cloud-native deployment of RAG transformer models for medical insurance systems.",
     ],
   },
