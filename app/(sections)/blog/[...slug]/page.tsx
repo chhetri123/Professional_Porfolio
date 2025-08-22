@@ -162,7 +162,7 @@ export default async function BlogPage({
           <div>
             <ShareLinks
               title={data.title}
-              url={`${process.env.NEXT_PUBLIC_SITE_URL}/blog/${params.slug.join(
+              url={`${"https://manishchhetri.com.np"}/blog/${params.slug.join(
                 "/"
               )}`}
             />
