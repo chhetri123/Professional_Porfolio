@@ -34,7 +34,7 @@ export default function Home() {
           </p>
           <p className="text-sm sm:text-base md:text-sm font-bold text-light-blue-500">
             <b>
-              <i>Full Stack Developer | DevOps Developer </i>
+              <i>Full Stack Developer </i>
             </b>
           </p>
           <p className="text-xs sm:text-sm md:text-base font-medium relative w-full sm:w-4/5">

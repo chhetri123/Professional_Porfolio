@@ -60,6 +60,20 @@ export default Experience;
 
 const Data = [
   {
+    name: "Maitri Services",
+    logo: "/maitri.png",
+    timeSpan: "Oct 2025 - Present",
+    role: "Software Engineer",
+    about: [
+      "Designing backend architecture and database schemas with a focus on clean code structure, modularization, and long-term maintainability.",
+      "Building dynamic, schema-driven data systems using JSON Schema, enabling frontend UI and workflow rendering from backend configurations.",
+      "Developing agents and sub-agents for batch-based processing of large documents (10–15+ pages) and structured content extraction.",
+      "Actively collaborating with teams and senior engineers on system design discussions, performance optimization, and architectural trade-off analysis.",
+    ],
+    companyMeta: "Maitri Services · Full-time",
+    location: "On-site",
+  },
+  {
     name: "Swivt technology",
     logo: "/swivt.png",
     timeSpan: "Nov 2023 - Aug 2025",
@@ -71,20 +85,6 @@ const Data = [
       "Enhancing existing projects by implementing new features",
       "WebRTC ,CRM,CMS and role‑based management systems",
       "Application containerization, Nginx optimization, Cloudflare DNS/domain management, and end-to-end cloud-native deployment of RAG transformer models for medical insurance systems.",
-    ],
-  },
-
-  {
-    name: "Swivt Education",
-    logo: "/swivt_education.png",
-    timeSpan: "Nov 2023 - Aug 2025",
-    role: "Full Stack Developer (Mentor)",
-
-    about: [
-      "Provide guidance and mentorship to junior developers, helping them enhance their technical skills and grow as full‑ stack engineers.",
-      "Assist mentees in building real‑world applications, focusing on both frontend and backend development using modern technologies (e.g., React, Node.js, MongoDB)",
-      "Review code, provide constructive feedback, and introduce best practices in software development.",
-      "Teach concepts like version control, API development, responsive design, and database management.",
     ],
   },
   {

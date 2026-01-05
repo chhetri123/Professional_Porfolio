@@ -82,7 +82,7 @@ export const Data = [
   },
   {
     link: "https://github.com/chhetri123",
-    icon: "https://www.svgrepo.com/show/475654/github-color.svg",
+    icon: "/github-color.svg",
     tooltip: "Connect On Github",
   },
   {

@@ -1,6 +1,5 @@
 "use client";
 
-import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -18,24 +17,32 @@ export default function ContactPage() {
 
     try {
       setIsSubmitting(true);
-      const templateData = {
-        to_name: "Manish Chhetri",
-        from_name: e.target.name.value,
-        message: e.target.message.value,
+
+      const formData = {
+        name: e.target.name.value,
         email: e.target.email.value,
+        message: e.target.message.value,
       };
-      await emailjs
-        .send(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
-          templateData,
-          process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string
-        )
-        .then(() => {
-          toast.success("Email Sent Successfully");
-        }),
-        e.target.reset();
-    } catch (error) {
+
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send email");
+      }
+
+      toast.success("Email Sent Successfully");
+      e.target.reset();
+    } catch (error: any) {
+      console.error(error);
+      toast.error(error.message || "Failed to send email. Please try again.");
     } finally {
       setIsSubmitting(false);
     }

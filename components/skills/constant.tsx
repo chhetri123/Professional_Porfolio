@@ -84,6 +84,10 @@ export const CloudServicesSkill = [
     name: "AWS",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
   },
+  {
+    name: "GCP",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original-wordmark.svg",
+  },
 ];
 
 export const MachineLearningSkill = [
