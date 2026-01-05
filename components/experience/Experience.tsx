@@ -80,11 +80,10 @@ const Data = [
     role: "Full Stack Software Developer",
 
     about: [
-      "Managing server configurations, troubleshooting, and resolving issues",
-      "Handling international client projects, ensuring high-quality deliverables and receiving consistently positive feedback",
-      "Enhancing existing projects by implementing new features",
-      "WebRTC ,CRM,CMS and role‑based management systems",
-      "Application containerization, Nginx optimization, Cloudflare DNS/domain management, and end-to-end cloud-native deployment of RAG transformer models for medical insurance systems.",
+      "Managed server configurations and resolved production issues by analyzing logs, reducing downtime by ~30%.",
+      "Delivered 5+ international client projects with high-quality results and consistently positive feedback.",
+      "Added key features to existing systems, including Payment Systems, Admin Panel, CMS, CRM, WebRTC, and role-based access control.",
+      "Containerized applications, optimized Nginx, managed Cloudflare DNS/domains, and deployed RAG-based transformer models for a medical insurance system in a cloud-native setup.",
     ],
   },
   {
