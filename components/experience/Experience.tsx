@@ -67,8 +67,8 @@ const Data = [
     about: [
       "Designing backend architecture and database schemas with a focus on clean code structure, modularization, and long-term maintainability.",
       "Building dynamic, schema-driven data systems using JSON Schema, enabling frontend UI and workflow rendering from backend configurations.",
-      "Developing agents and sub-agents for batch-based processing of large documents (100+ pages), structured content extraction, and automated workflow triggering and management",
-      "Developing and maintaining 25+ cloud-based services and processing pipelines on GCP, while collaborating with engineers on system design, performance optimization, CI/CD improvements, and architectural trade-offs",
+      "Developing agents and sub-agents for batch-based processing of large documents (100+ pages), structured content extraction, and automated workflow triggering and management.",
+      "Developing and maintaining 25+ cloud-based services and processing pipelines on GCP, while collaborating with engineers on system design, performance optimization, CI/CD improvements, and architectural trade-offs.",
       "Actively collaborating with teams and senior engineers on system design discussions, performance optimization, and architectural trade-off analysis.",
     ],
     companyMeta: "Maitri Services · Full-time",
