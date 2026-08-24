@@ -27,7 +27,7 @@ export default function Home() {
             Hey,
           </p>
           <p className="text-2xl sm:text-3xl md:text-5xl font-bold relative">
-            I'm
+            I&apos;m
             <span className="text-blue-500 ml-2 sm:ml-4 uppercase break-words">
               Manish Chhetri
             </span>

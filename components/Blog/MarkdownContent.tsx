@@ -12,6 +12,12 @@ interface MarkdownContentProps {
   path: string[];
 }
 
+interface MarkdownComponentProps extends React.HTMLAttributes<HTMLElement> {
+  node?: unknown;
+  href?: string;
+  src?: string;
+}
+
 export default function MarkdownContent({
   content,
   path,
@@ -86,12 +92,18 @@ export default function MarkdownContent({
 
   // Create a component renderer that handles any HTML element
   const createComponent = (tag: keyof JSX.IntrinsicElements) => {
-    return ({ node, className, children, ...props }: any) => {
+    const Component = ({
+      className,
+      children,
+      ...props
+    }: MarkdownComponentProps) => {
       // Get default style for this tag
       const defaultStyle = defaultStyles[tag] || "";
 
       // Special handling for specific attributes
-      const finalProps = { ...props };
+      const finalProps: Record<string, unknown> = { ...props };
+      // `node` is react-markdown's internal AST node, not a DOM attribute
+      delete finalProps.node;
       if (tag === "a") {
         finalProps.target = props.href?.startsWith("http")
           ? "_blank"
@@ -114,13 +126,15 @@ export default function MarkdownContent({
         children
       );
     };
+    Component.displayName = `Markdown(${tag})`;
+    return Component;
   };
 
   // Create components object with handlers for all HTML elements
   const components = Object.keys(defaultStyles).reduce((acc, tag) => {
     acc[tag] = createComponent(tag as keyof JSX.IntrinsicElements);
     return acc;
-  }, {} as Record<string, any>);
+  }, {} as Record<string, React.ComponentType<MarkdownComponentProps>>);
 
   return (
     <div className="prose dark:prose-invert max-w-none [&>*]:leading-snug mb-10">

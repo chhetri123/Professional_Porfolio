@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { join } from "path";
 import { createReadStream } from "fs";
 import { stat } from "fs/promises";
+import { Readable } from "stream";
 
 const ALLOWED_EXTENSIONS = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"];
 
@@ -24,8 +25,8 @@ export async function GET(
     }
 
     const stream = createReadStream(filePath);
-    return new Response(stream as any);
-  } catch (e) {
+    return new Response(Readable.toWeb(stream) as ReadableStream);
+  } catch {
     return new Response("Not found", { status: 404 });
   }
 }

@@ -12,7 +12,7 @@ export function BlogHeader() {
           <Quote className="w-8 h-8 text-blue-500 dark:text-blue-400 flex-shrink-0 mt-1" />
           <div>
             <p className="text-lg text-gray-700 dark:text-gray-300 font-serif italic">
-              "Be the change that you want to see in the world."
+              &quot;Be the change that you want to see in the world.&quot;
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-2 font-medium">
               ― Mahatma Gandhi

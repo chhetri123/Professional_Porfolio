@@ -117,7 +117,12 @@ export const MachineLearningSkill = [
   },
 ];
 
-function SkillCategory({ skills }: { skills: any[] }) {
+interface Skill {
+  name: string;
+  icon: string;
+}
+
+function SkillCategory({ skills }: { skills: Skill[] }) {
   return (
     <div className="my-5 flex flex-wrap gap-5 md:w-[900px]">
       {skills.map((skill, index) => (

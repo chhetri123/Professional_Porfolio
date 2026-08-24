@@ -12,16 +12,18 @@ import NextImage from "@/components/NextImage";
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const sendEmail = async (e: any) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
 
     try {
       setIsSubmitting(true);
 
+      const fields = new FormData(form);
       const formData = {
-        name: e.target.name.value,
-        email: e.target.email.value,
-        message: e.target.message.value,
+        name: String(fields.get("name") ?? ""),
+        email: String(fields.get("email") ?? ""),
+        message: String(fields.get("message") ?? ""),
       };
 
       const response = await fetch("/api/send-email", {
@@ -39,10 +41,14 @@ export default function ContactPage() {
       }
 
       toast.success("Email Sent Successfully");
-      e.target.reset();
-    } catch (error: any) {
+      form.reset();
+    } catch (error) {
       console.error(error);
-      toast.error(error.message || "Failed to send email. Please try again.");
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : "Failed to send email. Please try again."
+      );
     } finally {
       setIsSubmitting(false);
     }

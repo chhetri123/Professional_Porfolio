@@ -31,7 +31,7 @@ export default function About() {
               Professional Summary
             </h3>
             {/* I’m Manish Chhetri, a passionate and results-driven web developer
-            with a Bachelor's degree in Electronics, Communication, and
+            with a Bachelor&apos;s degree in Electronics, Communication, and
             Information Engineering from IOE Paschimanchal Campus. 
             I have a
             strong interest in cloud computing, microservices, and Artificial
@@ -50,7 +50,7 @@ export default function About() {
             <div className="space-y-3 md:space-y-4 font-medium">
               <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
                 I am Manish Chhetri, a passionate and results-driven software
-                developer with a Bachelor's degree in Electronics,
+                developer with a Bachelor&apos;s degree in Electronics,
                 Communication, and Information Engineering from{" "}
                 <a
                   href="https://ioepas.edu.np/"

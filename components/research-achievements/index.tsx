@@ -1,7 +1,6 @@
 "use client";
 
-import { BookOpen, Trophy, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { BookOpen, Trophy } from "lucide-react";
 import PublicationCard from "./PublicationCard";
 import AwardsTimeline from "./AwardsGrid";
 import { publications, awards } from "./constants";

@@ -3,7 +3,20 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-const NextImage = ({ src, alt, width, height, className }: any) => {
+interface NextImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+  /** Accepted for next/image call-site compatibility; not forwarded to the img. */
+  fill?: boolean;
+}
+
+const NextImage = ({
+  src,
+  alt,
+  width,
+  height,
+  className,
+  fill: _fill,
+  ...props
+}: NextImageProps) => {
   return (
     <LazyLoadImage
       effect="blur"
@@ -12,6 +25,7 @@ const NextImage = ({ src, alt, width, height, className }: any) => {
       width={width}
       src={src}
       alt={alt}
+      {...props}
     />
   );
 };

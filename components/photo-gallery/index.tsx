@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Camera } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PhotoCard from "./PhotoCard";
 import PhotoModal from "./PhotoModal";
 import {
-  photoGalleryData,
   getAllCategories,
   getPhotosByCategory,
   PhotoCategory,

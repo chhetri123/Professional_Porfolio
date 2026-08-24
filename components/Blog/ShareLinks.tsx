@@ -1,6 +1,6 @@
 "use client";
 
-import { Twitter, Linkedin, Facebook, Link, Check } from "lucide-react";
+import { Twitter, Linkedin, Link, Check } from "lucide-react";
 import { useState } from "react";
 
 interface ShareLinksProps {
