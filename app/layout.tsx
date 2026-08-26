@@ -22,10 +22,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Manish Chhetri | Full Stack Developer",
+  title: "Manish Chhetri | Software Engineer",
   description:
-    " Manish Chhetri is a full-stack developer with knowledge of microservice architecture, cloud services, and a keen interest in machine learnin also.",
+    "Manish Chhetri is a Software Engineer focused on microservices, cloud-native technologies, and reliable AI systems.",
   keywords: [
+    "Software Engineer"
     "Full-stack developer",
     "backend developer",
     "Microservice architecture",

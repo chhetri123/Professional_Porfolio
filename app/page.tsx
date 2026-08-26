@@ -34,13 +34,11 @@ export default function Home() {
           </p>
           <p className="text-sm sm:text-base md:text-sm font-bold text-light-blue-500">
             <b>
-              <i>Full Stack Developer </i>
+              <i>Software Engineer</i>
             </b>
           </p>
           <p className="text-xs sm:text-sm md:text-base font-medium relative w-full sm:w-4/5">
-            I am a <b>Full-Stack Developer</b> with knowledge of microservice
-            architecture, cloud services, and a keen interest in machine
-            learning.
+            I am a <b>Software Engineer</b> focused on microservice architecture, cloud-native technologies, and reliable AI systems.
           </p>
 
           <PhoneSocial />

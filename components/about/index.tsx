@@ -50,7 +50,7 @@ export default function About() {
             <div className="space-y-3 md:space-y-4 font-medium">
               <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
                 I am Manish Chhetri, a passionate and results-driven software
-                developer with a Bachelor&apos;s degree in Electronics,
+                engineer with a Bachelor&apos;s degree in Electronics,
                 Communication, and Information Engineering from{" "}
                 <a
                   href="https://ioepas.edu.np/"
