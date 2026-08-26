@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   description:
     "Manish Chhetri is a Software Engineer focused on microservices, cloud-native technologies, and reliable AI systems.",
   keywords: [
-    "Software Engineer"
+    "Software Engineer",
     "Full-stack developer",
     "backend developer",
     "Microservice architecture",
