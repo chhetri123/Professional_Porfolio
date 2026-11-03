@@ -49,8 +49,9 @@ export default function About() {
             relax by listening to music. */}
             <div className="space-y-3 md:space-y-4 font-medium">
               <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
-                I am Manish Chhetri, a passionate and results-driven software
-                engineer with a Bachelor&apos;s degree in Electronics,
+                I am Manish Chhetri, a software engineer building distributed,
+                event-driven backend systems and AI-agent pipelines on GCP and
+                AWS. I hold a Bachelor&apos;s degree in Electronics,
                 Communication, and Information Engineering from{" "}
                 <a
                   href="https://ioepas.edu.np/"
@@ -66,8 +67,8 @@ export default function About() {
               <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
                 I have a strong passion for cloud computing, microservices, and
                 Artificial Intelligence. I enjoy diving deep into technologies
-                like Docker and Kubernetes to build efficient and scalable
-                systems. Additionally, I explore Machine Learning, Natural
+                like Docker, Kubernetes, and GCP services such as Cloud Run,
+                Pub/Sub, and GKE to build efficient and scalable systems. Additionally, I explore Machine Learning, Natural
                 Language Processing, and Computer Vision to better understand
                 AI’s capabilities. My interest also extends to the Internet of
                 Things, where connectivity and data play a crucial role. By

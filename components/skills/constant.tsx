@@ -88,6 +88,31 @@ export const CloudServicesSkill = [
     name: "GCP",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original-wordmark.svg",
   },
+  {
+    name: "Cloud Run",
+    icon:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original-wordmark.svg",
+  },
+  {
+    name: "GKE",
+    icon:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original-wordmark.svg",
+  },
+  {
+    name: "Pub/Sub",
+    icon:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original-wordmark.svg",
+  },
+  {
+    name: "Cloud Tasks",
+    icon:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original-wordmark.svg",
+  },
+  {
+    name: "Cloud Functions",
+    icon:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original-wordmark.svg",
+  },
 ];
 
 export const MachineLearningSkill = [
