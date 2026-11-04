@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const Experience = () => {
   return (
-    <section className="py-12 px-4 sm:px-6">
+    <section className="py-8 px-1 sm:px-4">
       <div className="max-w-4xl mx-auto">
         <ol className="relative border-l-2 border-gray-200 dark:border-gray-700">
           {Data.map((data) => (
@@ -20,14 +20,14 @@ const Experience = () => {
                   />
                 </div>
                 <div className="flex-1 animate_in">
-                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-3 lg:gap-8 mb-1">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white leading-tight">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-6 mb-1">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white leading-tight">
                       {data.name}
                     </h3>
                     <Button
                       size="sm"
                       variant="secondary"
-                      className="self-start lg:self-center px-4 py-1.5 rounded-full text-xs font-medium whitespace-nowrap"
+                      className="self-start sm:self-center px-4 py-1.5 rounded-full text-xs font-medium whitespace-nowrap"
                     >
                       {data.timeSpan}
                     </Button>

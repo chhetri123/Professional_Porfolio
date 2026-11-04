@@ -149,17 +149,17 @@ interface Skill {
 
 function SkillCategory({ skills }: { skills: Skill[] }) {
   return (
-    <div className="my-5 flex flex-wrap gap-5 md:w-[900px]">
+    <div className="my-4 flex flex-wrap justify-center gap-2.5 sm:gap-4 w-full max-w-3xl">
       {skills.map((skill, index) => (
         <div key={index}>
           <Button
             variant="secondary"
-            className="p-3 h-12 rounded-full flex justify-center drop-shadow-sm items-center gap-2"
+            className="px-3 py-2 h-10 sm:h-12 rounded-full flex justify-center drop-shadow-sm items-center gap-2 text-sm sm:text-base transition-transform duration-200 hover:-translate-y-0.5"
           >
             <NextImage
               src={skill?.icon}
-              width={30}
-              height={30}
+              width={26}
+              height={26}
               alt={skill?.name}
               className=""
             />

@@ -22,7 +22,7 @@ export default function AwardsTimeline({ awards }: AwardsTimelineProps) {
         {sortedAwards.map((award, index) => (
           <div
             key={award.id}
-            className={`relative flex items-start gap-6 ${
+            className={`relative flex items-start gap-4 md:gap-6 ${
               index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
             }`}
           >
@@ -37,13 +37,13 @@ export default function AwardsTimeline({ awards }: AwardsTimelineProps) {
 
             {/* Content Card */}
             <div
-              className={`w-full md:w-1/2 ml-16 md:ml-0 ${
+              className={`min-w-0 flex-1 md:flex-none ml-12 md:ml-0 md:w-1/2 ${
                 index % 2 === 0 ? "md:pr-8" : "md:pl-8"
               }`}
             >
-              <div className="group rounded-lg border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-lg dark:hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative">
+              <div className="group rounded-lg border border-gray-200 dark:border-gray-700 p-4 sm:p-6 shadow-sm hover:shadow-lg dark:hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative">
                 {/* Date Badge */}
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
                   <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
                     <Calendar className="h-4 w-4" />
                     <span>{award.date}</span>

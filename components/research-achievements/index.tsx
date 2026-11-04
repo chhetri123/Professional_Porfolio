@@ -4,25 +4,18 @@ import { BookOpen, Trophy } from "lucide-react";
 import PublicationCard from "./PublicationCard";
 import AwardsTimeline from "./AwardsGrid";
 import { publications, awards } from "./constants";
+import SectionHeading from "@/components/SectionHeading";
 
 export default function ResearchAchievements() {
   return (
-    <section className="py-16 px-4 sm:px-6" id="research-achievements">
+    <section className="reveal py-14 md:py-20 px-4 sm:px-6" id="research-achievements">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <h1 className="text-3xl font-bold text-center border-b-2 border-blue-600 pb-4">
-              Research & Achievements
-            </h1>
-          </div>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Published research, professional certifications, and academic
-            achievements that
-            <br />
-            showcase my commitment to continuous learning and innovation.
-          </p>
-        </div>
+        <SectionHeading
+          eyebrow="Scholarship"
+          title="Research & Achievements"
+          description="Published research and academic achievements from my studies in AI and embedded systems."
+          className="px-0"
+        />
 
         {/* Published Research Section */}
         <div className="mb-16">
@@ -30,7 +23,7 @@ export default function ResearchAchievements() {
             <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/30">
               <BookOpen className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
               Published Research
             </h3>
           </div>
@@ -49,7 +42,7 @@ export default function ResearchAchievements() {
               <div className="p-2 rounded-lg bg-yellow-100 dark:bg-yellow-900/30">
                 <Trophy className="h-6 w-6 text-yellow-600 dark:text-yellow-400" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
                 Awards & Recognition
               </h3>
             </div>

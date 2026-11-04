@@ -1,14 +1,20 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Experience from "./Experience";
 import Education from "./Education";
+import SectionHeading from "@/components/SectionHeading";
 
 function page() {
   return (
     <section
-      className="flex justify-center md:py-32 md:mt-32 md:mb-10"
+      className="reveal flex flex-col items-center px-4 sm:px-6 py-14 md:py-20"
       id="experience"
     >
-      <Tabs defaultValue="experience" className="w-[500px] md:w-[850px]">
+      <SectionHeading
+        eyebrow="Journey"
+        title="Experience & Education"
+        description="Where I have worked and studied."
+      />
+      <Tabs defaultValue="experience" className="w-full max-w-[850px]">
         <TabsList className="grid w-full rounded-full grid-cols-2">
           <TabsTrigger className="rounded-full" value="experience">
             Experience
