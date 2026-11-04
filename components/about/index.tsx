@@ -1,22 +1,19 @@
 "use client";
 
 import NextImage from "../NextImage";
+import SectionHeading from "../SectionHeading";
 
 export default function About() {
   return (
-    <section className="container mx-auto px-4 py-12 md:py-24" id="about">
+    <section className="reveal container mx-auto px-4 py-14 md:py-20" id="about">
       <div className="max-w-6xl mx-auto">
-        {/* Header - Smaller text on mobile */}
-        <h2 className="text-xl md:text-3xl font-bold text-center mb-8 md:mb-12">
-          About Me
-          <div className="h-1 w-20 bg-blue-600 mx-auto mt-2"></div>
-        </h2>
+        <SectionHeading eyebrow="Introduction" title="About Me" />
 
         {/* Content Container */}
         <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           {/* Image Container */}
           <div className="w-full lg:w-2/5">
-            <div className="relative aspect-square w-[240px] sm:w-[280px] md:w-[320px] lg:max-w-[400px] mx-auto">
+            <div className="relative aspect-square w-[min(70vw,300px)] md:w-[320px] lg:w-full lg:max-w-[400px] mx-auto">
               <NextImage
                 src="/intro_image.png"
                 alt="Manish Chhetri"
@@ -48,7 +45,7 @@ export default function About() {
             inspiration through these conversations. In my free time, I like to
             relax by listening to music. */}
             <div className="space-y-3 md:space-y-4 font-medium">
-              <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
+              <p className="text-sm md:text-base leading-relaxed">
                 I am Manish Chhetri, a software engineer building distributed,
                 event-driven backend systems and AI-agent pipelines on GCP and
                 AWS. I hold a Bachelor&apos;s degree in Electronics,
@@ -64,7 +61,7 @@ export default function About() {
                 .
               </p>
 
-              <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
+              <p className="text-sm md:text-base leading-relaxed">
                 I have a strong passion for cloud computing, microservices, and
                 Artificial Intelligence. I enjoy diving deep into technologies
                 like Docker, Kubernetes, and GCP services such as Cloud Run,
@@ -76,14 +73,14 @@ export default function About() {
                 cutting edge of technology and apply innovative solutions.
               </p>
 
-              <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
+              <p className="text-sm md:text-base leading-relaxed">
                 I enjoy learning new skills to build secure and scalable
                 solutions and mentoring junior developers whenever possible. To
                 share knowledge and stay updated, I occasionally write blogs and
                 create videos that might help others in their journey.
               </p>
 
-              <p className="text-xs md:text-sm lg:text-base leading-normal md:leading-normal">
+              <p className="text-sm md:text-base leading-relaxed">
                 Beyond technology, I’m an avid reader of Nepali literature,
                 captivated by its storytelling. I also enjoy discussing the
                 latest tech trends with friends and find inspiration through
