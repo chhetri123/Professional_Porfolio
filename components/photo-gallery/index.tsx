@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Camera } from "lucide-react";
+import SectionHeading from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 import PhotoCard from "./PhotoCard";
 import PhotoModal from "./PhotoModal";
@@ -35,23 +36,14 @@ export default function PhotoGallery() {
 
   return (
     <section
-      className="flex animate_in flex-col min-h-full justify-center items-center px-4 sm:px-6 py-16"
-      id="photo-gallery "
+      className="reveal flex flex-col justify-center items-center px-4 sm:px-6 py-14 md:py-20"
+      id="photo-gallery"
     >
-      {/* Header */}
-      <div className="text-center mb-12">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <h1 className="text-3xl font-bold text-center border-b-2 border-blue-600 pb-4">
-            Photo Gallery
-          </h1>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          The place where you can know me more. Through the woods, foods,
-          family,
-          <br />
-          success, failures, achievements and more.
-        </p>
-      </div>
+      <SectionHeading
+        eyebrow="Beyond the code"
+        title="Photo Gallery"
+        description="A place to know me better: the woods, food, family, successes, failures and more."
+      />
 
       {/* Category Filter */}
       <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -73,9 +65,9 @@ export default function PhotoGallery() {
       </div>
 
       {/* Photo Grid */}
-      <div className="w-full max-w-6xl mx-auto lg:px-20 animate_in">
+      <div className="w-full max-w-6xl mx-auto lg:px-8">
         {filteredPhotos.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 min-[500px]:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredPhotos.map((category) => (
               <PhotoCard
                 key={category.id}

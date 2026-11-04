@@ -8,6 +8,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { Label } from "@/components/ui/label";
 import NextImage from "@/components/NextImage";
+import SectionHeading from "@/components/SectionHeading";
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -56,12 +57,16 @@ export default function ContactPage() {
 
   return (
     <section
-      className="flex animate_in flex-col min-h-full justify-center items-center px-4 sm:px-6 mb-32"
+      className="reveal flex flex-col justify-center items-center px-4 sm:px-6 py-14 md:py-20"
       id="contact"
     >
-      <h1 className="text-3xl font-semibold text-center my-10">Contact</h1>
-      <div className="mx-auto flex flex-col md:flex-row max-w-7xl gap-8 items-center justify-end">
-        <Card className="md:w-[450px]">
+      <SectionHeading
+        eyebrow="Say hello"
+        title="Contact"
+        description="Questions, collaboration or research ideas are all welcome."
+      />
+      <div className="mx-auto flex w-full flex-col lg:flex-row max-w-5xl gap-8 items-center justify-center">
+        <Card className="w-full max-w-md lg:w-[450px]">
           <CardHeader className="text-center font-semibold">
             Just to say hi,
             <br />
@@ -72,6 +77,7 @@ export default function ContactPage() {
               <div className="grid w-full items-center gap-1.5 my-5">
                 <Label htmlFor="name">Name*</Label>
                 <Input
+                  id="name"
                   type="text"
                   name="name"
                   placeholder="Enter Your Name"
@@ -81,6 +87,7 @@ export default function ContactPage() {
               <div className="grid w-full items-center gap-1.5 my-5">
                 <Label htmlFor="email">Email*</Label>
                 <Input
+                  id="email"
                   type="email"
                   name="email"
                   placeholder="Enter Your Email"
@@ -88,8 +95,9 @@ export default function ContactPage() {
                 />
               </div>
               <div className="grid w-full items-center gap-1.5 my-5">
-                <Label htmlFor="message">Mesaage*</Label>
+                <Label htmlFor="message">Message*</Label>
                 <Textarea
+                  id="message"
                   name="message"
                   rows={5}
                   placeholder="Enter Your Message"
@@ -109,7 +117,7 @@ export default function ContactPage() {
             </form>
           </CardContent>
         </Card>
-        <div className="w-full md:w-[450px] hidden md:block ml-auto">
+        <div className="hidden lg:block w-[450px]">
           <NextImage
             height={500}
             width={500}
