@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import SectionHeading from "@/components/SectionHeading";
 import {
   Frontend,
   Backend,
@@ -41,24 +42,19 @@ const data = [
 
 const Skills = () => {
   return (
-    <section className="md:py-10 mt-32 mb-32" id="skills">
-      <div className="flex flex-col items-center justify-center py-5">
-        <p className="font-bold text-3xl">Skills</p>
-        <div className="h-[2px] w-20 bg-blue-500 rounded-full my-1"></div>
-      </div>
-      <div className="flex flex-col justify-center items-center">
+    <section className="reveal px-4 sm:px-6 py-14 md:py-20" id="skills">
+      <SectionHeading
+        eyebrow="Toolkit"
+        title="Skills"
+        description="The languages, platforms and tools I use to build and study reliable systems."
+      />
+      <div className="mx-auto flex max-w-3xl flex-col items-center gap-2">
         {data.map(({ label }) => (
-          <div key={label} className="flex flex-col md:ml-[1%] ml-[5%]">
-            <div className="flex flex-col">
-              <span className="animate_in text-base md:text-xl mt-1">
-                {label}
-              </span>
-              <div className="w-16 h-[1px] bg-blue-500 rounded-full my-1"></div>
-            </div>
-
-            <div className="flex justify-center items-center gap-5">
-              {skillComponents[label] && <div>{skillComponents[label]()}</div>}
-            </div>
+          <div key={label} className="flex w-full flex-col items-center">
+            <h3 className="text-sm sm:text-base font-semibold uppercase tracking-wider text-muted-foreground mt-4">
+              {label.replace(/([a-z])([A-Z])/g, "$1 $2")}
+            </h3>
+            {skillComponents[label] && skillComponents[label]()}
           </div>
         ))}
       </div>

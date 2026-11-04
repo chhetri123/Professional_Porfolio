@@ -5,24 +5,27 @@ import { ProjectData } from "./constant";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import SectionHeading from "@/components/SectionHeading";
 
 function ProjectsPage() {
   return (
     <section
-      className="flex flex-col space-y-10 justify-center items-center md:py-24 px-3 mt-28 mb-28 my-5 h-fullscreen"
+      className="reveal flex flex-col items-center py-14 md:py-20 px-1"
       id="projects"
     >
-      <h1 className="text-3xl font-bold text-center border-b-2 border-blue-600 pb-4">
-        Projects
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate_in">
+      <SectionHeading
+        eyebrow="Practice"
+        title="Projects"
+        description="Hands-on builds where I learned by doing."
+      />
+      <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         {ProjectData.map(
           ({ title, live, description, github, techstack }, index) => (
-            <Card key={index} className="shadow-md rounded-lg overflow-hidden">
-              <div className="p-6 flex flex-col gap-4">
-                <div className="flex flex-col lg:flex-row justify-between">
-                  <h3 className="text-xl font-medium">{title}</h3>
-                  <div className="flex max-md:my-2 gap-2">
+            <Card key={index} className="shadow-sm rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <div className="p-5 sm:p-6 flex flex-col gap-4">
+                <div className="flex flex-col xl:flex-row xl:items-start justify-between gap-3">
+                  <h3 className="text-lg sm:text-xl font-semibold">{title}</h3>
+                  <div className="flex flex-wrap gap-2">
                     {live ? (
                       <Link href={live} target="_blank">
                         <Button variant="secondary">
@@ -38,7 +41,7 @@ function ProjectsPage() {
                     </Link>
                   </div>
                 </div>
-                <p className="text-base leading-relaxed">{description}</p>
+                <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">{description}</p>
                 <div className="flex flex-wrap gap-2">
                   {techstack.map((tech, index) => (
                     <Badge key={index} variant={"outline"}>
