@@ -16,38 +16,38 @@ export default function Home() {
   return (
     <>
       <section
-        className="py-8 sm:py-12 md:py-16 min-h-[70vh] sm:min-h-[80vh] md:min-h-[85vh] 
-        animate_in flex items-center flex-col-reverse lg:flex-row gap-6 sm:gap-8 lg:gap-10 justify-center"
+        className="px-4 py-10 sm:py-14 md:py-16 min-h-[75vh] md:min-h-[80vh]
+        animate_in flex items-center flex-col-reverse lg:flex-row gap-8 sm:gap-10 lg:gap-14 justify-center"
       >
         <div
-          className="flex flex-col gap-3 sm:gap-4 text-left w-[90%] sm:w-4/5 lg:w-1/2 2xl:w-1/3 
-          mx-auto lg:mx-6 xl:mx-0"
+          className="flex flex-col gap-3 sm:gap-4 text-center lg:text-left w-full max-w-xl lg:max-w-lg xl:max-w-xl
+          items-center lg:items-start"
         >
-          <p className="text-xl sm:text-2xl font-bold text-light-blue-700">
+          <p className="text-lg sm:text-xl font-semibold text-blue-600 dark:text-blue-400">
             Hey,
           </p>
-          <p className="text-2xl sm:text-3xl md:text-5xl font-bold relative">
+          <p className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif relative">
             I&apos;m
-            <span className="text-blue-500 ml-2 sm:ml-4 uppercase break-words">
+            <span className="text-blue-600 dark:text-blue-400 ml-2 sm:ml-3 break-words">
               Manish Chhetri
             </span>
           </p>
-          <p className="text-sm sm:text-base md:text-sm font-bold text-light-blue-500">
+          <p className="text-sm sm:text-base md:text-lg font-bold text-muted-foreground">
             <b>
               <i>Software Engineer</i>
             </b>
           </p>
-          <p className="text-xs sm:text-sm md:text-base font-medium relative w-full sm:w-4/5">
+          <p className="text-sm sm:text-base md:text-lg font-medium relative w-full leading-relaxed text-muted-foreground">
             I am a <b>Software Engineer</b> focused on microservice architecture, cloud-native technologies, and reliable AI systems.
           </p>
 
           <PhoneSocial />
 
-          <div className="flex flex-wrap justify-center md:justify-normal gap-2 sm:gap-4 md:gap-6 mt-3 sm:mt-5">
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-4 mt-3 sm:mt-5">
             <Link href={"#about"}>
               <Button
                 variant="secondary"
-                className="flex rounded-full gap-1 sm:gap-2 items-center text-sm sm:text-base px-3 sm:px-4"
+                className="flex rounded-full gap-2 items-center text-sm sm:text-base px-4"
               >
                 <User className="w-4 h-4 sm:w-5 sm:h-5" />
                 About Me
@@ -66,10 +66,7 @@ export default function Home() {
             <Link href="/blog">
               <Button
                 variant="secondary"
-                className="flex rounded-full gap-2 items-center relative animate-pulse
-                  after:absolute after:inset-0 after:z-[-1] after:rounded-full
-                  after:bg-gradient-to-r after:from-blue-400 after:to-purple-500
-                  after:p-[2px] after:animate-border-glow"
+                className="flex rounded-full gap-2 items-center relative ring-1 ring-blue-400/60 hover:ring-blue-500 transition-shadow"
               >
                 <FilePenLine className="text-lg" />
                 My Blogs
@@ -82,20 +79,20 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80">
+        <div className="w-44 h-44 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 shrink-0">
           <NextImage
             src="/profile.png"
             width={""}
             height={""}
-            alt="Pankaj Kumar"
-            className="rounded-full w-full h-full shadow-lg"
+            alt="Manish Chhetri"
+            className="rounded-full w-full h-full object-cover shadow-lg ring-4 ring-white/70 dark:ring-white/10"
           />
         </div>
       </section>
 
       <About />
       <Skills />
-      <div className="w-[90%] sm:w-4/5 mx-auto">
+      <div className="w-full max-w-5xl px-4 sm:px-6 mx-auto">
         <ProjectsPage />
       </div>
       <Experience />

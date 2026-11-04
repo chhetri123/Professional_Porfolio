@@ -43,7 +43,7 @@ export default function Social() {
 
 export const PhoneSocial = () => {
   return (
-    <div className="flex flex-row justify-center space-x-5 mt-2 sm:hidden">
+    <div className="flex flex-row justify-center gap-4 mt-2 lg:hidden">
       {Data.map((item, index) => {
         return (
           <TooltipProvider key={index}>
